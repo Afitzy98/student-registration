@@ -7,4 +7,4 @@ build:
   ci:
     - mkdir -p shippable/testresults
     - mvn install -DskipTests=false
-    -cp -r $SHIPPABLE_BUILD_DIR/target shippable/testresults
+    - cp -r $SHIPPABLE_BUILD_DIR/target shippable/testresults
