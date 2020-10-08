@@ -107,4 +107,9 @@ public class Module {
         newCourses.remove(c);
         setCourses(newCourses);
     }
+
+    @Override
+    public String toString() {
+        return id + " " + name;
+    }
 }

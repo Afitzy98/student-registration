@@ -98,4 +98,9 @@ public class Course {
         newStudents.remove(s);
         setStudents(newStudents);
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }

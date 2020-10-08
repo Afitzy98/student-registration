@@ -80,4 +80,13 @@ public class ModuleTest {
         assertEquals(0, stdnts.size());
         assertEquals(0, courses.size());
     }
+
+    @Test
+    public void testsToString() {
+        Module m = new Module(name, id, description, lecturer);
+
+        String s = m.toString();
+
+        assertEquals(id + " " + name, s);
+    }
 }

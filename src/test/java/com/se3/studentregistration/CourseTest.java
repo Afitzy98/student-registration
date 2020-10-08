@@ -76,4 +76,13 @@ public class CourseTest {
         assertEquals(0, stdnts.size());
         assertEquals(0, mods.size());
     }
+    
+    @Test
+    public void testsToString() {
+        Course c = new Course(name, startDate, endDate);
+
+        String s = c.toString();
+
+        assertEquals(name, s);
+    }
 }

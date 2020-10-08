@@ -143,4 +143,9 @@ public class Student {
         newCourses.remove(c);
         setCourses(newCourses);
     }
+
+    @Override
+    public String toString() {
+        return "Name: " + name + ", Username: " + username;
+    }
 }

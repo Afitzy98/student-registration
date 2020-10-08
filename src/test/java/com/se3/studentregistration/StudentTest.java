@@ -107,4 +107,13 @@ public class StudentTest {
 
         assertEquals("Test22", username);
     }
+
+    @Test
+    public void testsToString() {
+        Student s = new Student(name, age, dob, id, email, address, phoneNo);
+
+        String ts = s.toString();
+
+        assertEquals("Name: " + name + ", Username: " + s.getUsername(), ts);
+    }
 }
