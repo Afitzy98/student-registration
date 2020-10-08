@@ -1,16 +1,14 @@
 language: java
 
 jdk:
-  - oraclejdk11
+  - oraclejdk8
 
 build:
   ci:
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
 
-    - mvn clean cobertura:cobertura
-    - mvn install
-    - mvn test
+    - mvn install -DskipTests=false cobertura:cobertura
 
     - cp -r $SHIPPABLE_BUILD_DIR/target shippable/testresults
     - cp -r $SHIPPABLE_BUILD_DIR/target shippable/codecoverage
