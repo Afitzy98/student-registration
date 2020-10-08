@@ -2,3 +2,7 @@ langauge: java
 
 jdk:
   - openjdk11
+
+build:
+  ci:
+    - shippable_retry mvn install -DskipTests=true
