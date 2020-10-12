@@ -8,8 +8,7 @@ build:
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
 
-    - mvn clean cobertura:cobertura
-    - mvn install -DskipTests=false
+    - mvn clean install -DskipTests=false
 
     - cp -r $SHIPPABLE_BUILD_DIR/target shippable/testresults
     - cp -r $SHIPPABLE_BUILD_DIR/target shippable/codecoverage
