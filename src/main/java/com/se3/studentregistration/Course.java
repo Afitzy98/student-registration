@@ -78,7 +78,12 @@ public class Course {
     public void addModule(Module m) {
         ArrayList<Module> newModules = modules;
         newModules.add(m);
+        this.addModulesToStudents(m);
         setModules(newModules);
+    }
+    
+    protected void addModulesToStudents(Module m) {
+        this.getStudents().stream().forEach(s -> {s.addModule(m); m.addStudent(s);});
     }
 
     public void removeModule(Module m) {
@@ -90,6 +95,8 @@ public class Course {
     public void addStudent(Student s) {
         ArrayList<Student> newStudents = students;
         newStudents.add(s);
+        // add course to student
+        s.addCourse(this);
         setStudents(newStudents);
     }
 
